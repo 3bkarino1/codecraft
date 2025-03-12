@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
@@ -8,6 +7,11 @@ const InteractiveLearning = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [activeStep, setActiveStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
+
+  // Define these variables at the component level so they're accessible everywhere
+  const barWidth = 0.6;
+  let maxVal = 0; // Will be calculated in the visualization
+  let startX = 0; // Will be calculated in the visualization
 
   const steps = [
     {
@@ -239,10 +243,9 @@ const InteractiveLearning = () => {
         case 3: // Algorithms in Action
           // Create an array of bars representing data
           const barData = [6, 2, 9, 4, 5, 8, 1, 3, 7];
-          const maxVal = Math.max(...barData);
-          const barWidth = 0.6;
+          maxVal = Math.max(...barData); // Set the maxVal for global access
           const totalWidth = barData.length * (barWidth * 1.2);
-          const startX = -totalWidth / 2 + barWidth / 2;
+          startX = -totalWidth / 2 + barWidth / 2; // Set the startX for global access
           
           barData.forEach((value, index) => {
             const barHeight = (value / maxVal) * 5;
