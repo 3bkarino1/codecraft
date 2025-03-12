@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Courses from "@/components/Courses";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
+import InteractiveLearning from "@/components/InteractiveLearning";
 import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
 
@@ -28,6 +29,23 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      
+      {/* Interactive 3D Learning Component */}
+      <section className="section-container" id="interactive-learning">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-block mb-3 px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-medium tracking-wider">
+            3D LEARNING TECHNOLOGY
+          </span>
+          <h2 className="font-bold mb-4">Learn Programming Through 3D Visualization</h2>
+          <p className="text-muted-foreground">
+            Our innovative 3D visualizations transform abstract programming concepts into 
+            tangible models you can explore, manipulate, and understand intuitively.
+          </p>
+        </div>
+        
+        <InteractiveLearning />
+      </section>
+      
       <Courses />
       <About />
       
