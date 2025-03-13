@@ -14,7 +14,7 @@ const Index = () => {
     // Welcome toast when page loads
     const timeout = setTimeout(() => {
       toast("Welcome to CodeCraft", {
-        description: "Explore our interactive 3D programming courses",
+        description: "Explore our interactive programming courses",
         action: {
           label: "Explore",
           onClick: () => document.getElementById("courses")?.scrollIntoView({ behavior: "smooth" })
@@ -30,16 +30,16 @@ const Index = () => {
       <Navbar />
       <Hero />
       
-      {/* Interactive 3D Learning Component */}
+      {/* Interactive Learning Component */}
       <section className="section-container" id="interactive-learning">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block mb-3 px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-medium tracking-wider">
-            3D LEARNING TECHNOLOGY
+            LEARNING TECHNOLOGY
           </span>
-          <h2 className="font-bold mb-4">Learn Programming Through 3D Visualization</h2>
+          <h2 className="font-bold mb-4">Learn Programming Through Visualization</h2>
           <p className="text-muted-foreground">
-            Our innovative 3D visualizations transform abstract programming concepts into 
-            tangible models you can explore, manipulate, and understand intuitively.
+            Our innovative visualizations transform abstract programming concepts into 
+            tangible models you can explore, understand, and learn from intuitively.
           </p>
         </div>
         
